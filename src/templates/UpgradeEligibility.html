@@ -1,0 +1,38 @@
+---
+title: 'Upgrade Eligibility Check'
+heading: 'Please enter the Mobile Number PIN to check Upgrade Promotional Pricing eligibility.'
+customSteps: [
+	{ title: 'Customer Type', description: 'Customer Type' },
+	{ title: 'Contract Type', description: 'Contract Type' },
+	{ title: 'Upgrade Eligibility Check', description: 'Upgrade Eligibility Check' },
+	{ title: 'Choose Action', description: 'Choose Action' },
+	{ title: 'Download to POS', description: 'POS' }
+]
+activeStep: 3
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="form">
+		<form action="/">
+			<div class="form__field">
+				<label class="form__label">Mobile Number:</label>
+				{{form.inputBox.call({
+					placeholder: 'Input Mobile Number',
+					classList: 'is-error',
+					errorMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, vero.'
+				})}}
+			</div>
+			<div class="form__field">
+				<label class="form__label">Result:</label>
+				<div class="form__text color-green">{{mixins.icon('check')}} Mobile Number is eligible for Port-In Promotional Pricing</div>
+				<div class="form__text color-red">{{mixins.icon('error')}} Mobile Number is non-eligible for Port-In Promotional Pricing</div>
+			</div>
+			<div class="form__field">
+				<button class="btn btn_darkgray btn_lg btn_block" data-animation="ripple-white">Check Port-In Eligibility</button>					
+			</div>
+		</form>
+	</div>
+
+{% endblock %}

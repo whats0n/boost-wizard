@@ -1,0 +1,51 @@
+.type
+	text-align: center
+	&_triple
+		margin: 0 auto
+		max-width: 720px
+	&__row
+		margin: -20px
+		font-size: 0
+	&__col
+		display: inline-block
+		vertical-align: top
+		width: 200px
+		padding: 20px 
+		&_md
+			width: 240px
+	&__btn
+		display: block
+		padding: 20px 5px 10px
+		border: 2px solid $darkGray
+		border-radius: 2px
+		width: 100%
+		color: $darkGray
+		background: $white
+		user-select: none
+		transform: translate3d(0, 0, 0)
+		&-icon
+			display: block
+			font-size: 0
+			.icon
+				fill: $orange
+				color: $darkGray
+				font-size: 86px
+			&_fill
+				.icon
+					color: $white
+					fill: $blue
+					stroke: none
+			img 
+				display: inline-block
+				vertical-align: top
+				height: 86px
+		&-title
+			display: block
+			padding-top: 10px
+			height: 48px
+			+vertical
+			span
+				display: inline-block
+				vertical-align: middle
+				font-size: 16px
+				line-height: 1

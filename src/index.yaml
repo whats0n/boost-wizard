@@ -1,0 +1,14 @@
+ProjectTitle: boost-wizard
+
+PageList:
+- file: CustomerSelection.html
+- file: NewCustomerContractTypes.html
+- file: ExistCustomerContractTypes.html
+- file: ExistCustomerContractTypesAddLine.html
+- file: AccountMaintenance.html
+- file: PortInEligibility.html
+- file: UpgradeEligibility.html
+- file: ChooseAction.html
+- file: LoadToPOSNewCustNoAddLines.html
+- file: LoadToPOSExistCustNoAddLines.html
+- file: LoadToPOSExistCustWithAddLines.html

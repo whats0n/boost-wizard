@@ -1,0 +1,80 @@
+---
+title: 'Download to POS'
+heading: 'Please enter the Mobile Number and PIN to download the&nbsp;activation(s)&nbsp;to&nbsp;POS'
+types: [
+	{ img: 'img/epay-payment.svg', alt: 'ePay', title: 'ePay Payment' },
+	{ icon: 'start-family', title: 'Start Family' }
+]
+activeStep: 4
+footer: {
+	download: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="form form_type" data-type-buttons="2">
+		<form action="/">
+			<div class="form__field">
+				<label class="form__label">Mobile Number:</label>
+				{{form.inputBox.call({
+					placeholder: 'Input Mobile Number'
+				})}}
+			</div>
+			<div class="form__field">
+				<label class="form__label">PIN:</label>
+				{{form.inputBox.call({
+					placeholder: 'Input PIN'
+				})}}
+			</div>
+			<div class="form__field form__field_wide">
+				<label class="form__label">Mobile Number:</label>
+				<div class="field">
+					{{form.inputBox.call({
+						placeholder: 'Input Mobile Number'
+					})}}
+					<div class="field__delete">
+						<button class="btn-delete" type="button">
+							<span>Remove</span>
+							{{mixins.icon('close')}}
+						</button>		
+					</div>
+				</div>
+				<div class="field">
+					{{form.inputBox.call({
+						placeholder: 'Input Mobile Number'
+					})}}
+					<div class="field__delete">
+						<button class="btn-delete" type="button">
+							<span>Remove</span>
+							{{mixins.icon('close')}}
+						</button>		
+					</div>
+				</div>
+			</div>
+			<div class="form__field">
+				<button class="btn btn_darkgray btn_lg btn_block" data-animation="ripple-white">Add Another Line</button>					
+			</div>
+		</form>
+		<div class="type form__type">
+			<div class="type__row">
+				{% for item in types %}
+					<div class="type__col">
+						<button class="type__btn" data-animation="ripple">
+							<span class="type__btn-icon">
+								{% if item.icon %}
+									{{mixins.icon(item.icon)}}
+								{% else %}
+									<img src="{{item.img}}" alt="{{item.alt}}">
+								{% endif %}
+							</span>
+							<span class="type__btn-title"><span>{{item.title | safe}}</span></span>
+						</button>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
