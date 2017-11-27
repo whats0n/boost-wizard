@@ -1,8 +1,10 @@
 .type
+	margin: 0 auto
 	text-align: center
-	&_triple
-		margin: 0 auto
+	&[data-columns="3"]
 		max-width: 720px
+	&[data-columns="4"]
+		max-width: 880px
 	&__row
 		margin: -20px
 		font-size: 0

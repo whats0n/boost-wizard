@@ -5,9 +5,15 @@ types: [
 	{ icon: 'activation-add-a-line', title: 'Activation<br>Add-A-Line' },
 	{ icon: 'port-in-add-a-line', title: 'Port-In<br>Add-A-Line' },
 	{ icon: 'byod-add-a-line', title: 'BYOD<br>Add-A-Line' },
-	{ icon: 'upgrade', title: 'Upgrade' },
 	{ icon: 'upgrade-add-a-line', title: 'Upgrade<br>Add-A-Line' },
+	{ icon: 'upgrade', title: 'Upgrade' },
 	{ icon: 'boost-up', title: 'BoostUp!' }
+]
+customSteps: [
+	{ title: 'Customer Type', description: 'Existing Customer' },
+	{ title: 'Contract Type' },
+	{ title: 'Choose action' },
+	{ title: 'Download to POS' }
 ]
 activeStep: 2
 ---
@@ -15,7 +21,7 @@ activeStep: 2
 
 {% block content %}
 	
-	<div class="type type_triple">
+	<div class="type" data-columns="4">
 		<div class="type__row">
 			{% for item in types %}
 				<div class="type__col">

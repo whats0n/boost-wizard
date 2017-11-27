@@ -1,8 +1,8 @@
 {% set steps = [
-	{ title: 'Customer Type', description: 'Customer Type' },
-	{ title: 'Contract Type', description: 'Contract Type' },
-	{ title: 'Choose action', description: 'Choose action' },
-	{ title: 'Download to POS', description: 'POS' }
+	{ title: 'Customer Type' },
+	{ title: 'Contract Type' },
+	{ title: 'Choose action' },
+	{ title: 'Download to POS' }
 ] %}
 <!-- begin steps -->
 <div class="steps {{stepsClassList}}">
@@ -12,8 +12,8 @@
 			{% for item in customSteps or steps %}
 				<li class="steps__item">
 					<a href="#" class="steps__in" {% if activeStep == loop.index %}data-step-state="active"{% else %}data-step-state="disabled"{% endif %} data-step="{{loop.index}}">
-						<div class="steps__title">{{customStep[loop.index].title or item.title | safe}}</div>
-						<div class="steps__description">{{customStep[loop.index].description or item.description | safe}}</div>
+						<div class="steps__title">{{item.title | safe}}</div>
+						<div class="steps__description">{{item.description | safe}}</div>
 						<div class="steps__item-circle"></div>
 					</a>
 				</li>
