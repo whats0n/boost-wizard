@@ -24,7 +24,7 @@
 			left: 0
 			bottom: 13px
 			margin-bottom: -2px
-			border-bottom: 4px solid currentColor
+			border-bottom: 4px solid #c1c1c1
 			width: 100%
 	&__list
 		display: table
@@ -47,7 +47,7 @@
 				width: 50%
 	&__in
 		display: block
-		color: inherit
+		color: #c1c1c1
 		&:hover
 			.steps__title,
 			.steps__description
@@ -97,7 +97,12 @@
 			border-radius: 50%
 			width: 26px
 			height: 26px
-			background: currentColor
+	&__item-circle
+		&:before
+			background: #c1c1c1
+	&__progress-circle
+		&:before
+			background: $orange
 	&__item-circle
 		margin-top: 8px
 	&__progress
@@ -124,7 +129,7 @@
 				left: 0
 				bottom: 13px
 				margin-bottom: -2px
-				border-bottom: 4px solid currentColor
+				border-bottom: 4px solid $orange
 				width: 100%
 		&-row
 			display: table
