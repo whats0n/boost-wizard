@@ -12,3 +12,4 @@ PageList:
 - file: LoadToPOSNewCustNoAddLines.html
 - file: LoadToPOSExistCustNoAddLines.html
 - file: LoadToPOSExistCustWithAddLines.html
+- file: modals.html
