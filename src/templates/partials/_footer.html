@@ -1,16 +1,16 @@
 <!-- begin footer -->
 <footer class="footer">
 	<div class="footer__left">
-		<button class="btn btn_lg btn_red" data-animation="ripple">Cancel</button>
+		<button class="btn btn_lg btn_red" data-animation="ripple" {{footer.disabled}}>Cancel</button>
 	</div>
 	<div class="footer__right">
 		{% if footer.noPrev != true %}
-			<button class="btn btn_lg btn_darkgray" data-step-direction="prev" data-animation="ripple-white">Previous</button>
+			<button class="btn btn_lg btn_darkgray" data-step-direction="prev" data-animation="ripple-white" {{footer.disabled}}>Previous</button>
 		{% endif %}
 		{% if footer.download %}
-			<button class="btn btn_lg btn_green" data-animation="ripple">Download to POS</button>
+			<button class="btn btn_lg btn_green" data-animation="ripple" {{footer.disabled}}>Download to POS</button>
 		{% else %}
-			<button class="btn btn_lg btn_darkgray" data-step-direction="next" data-animation="ripple-white">Next</button>
+			<button class="btn btn_lg btn_darkgray" data-step-direction="next" data-animation="ripple-white" {{footer.disabled}}>Next</button>
 		{% endif %}
 	</div>
 </footer>

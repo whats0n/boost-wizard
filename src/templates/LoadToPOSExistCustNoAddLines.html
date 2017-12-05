@@ -13,7 +13,8 @@ customSteps: [
 ]
 activeStep: 4
 footer: {
-	download: true
+	download: true,
+	disabled: 'disabled'
 }
 ---
 {% extends "layouts/_layout.html" %}
@@ -35,7 +36,7 @@ footer: {
 				})}}
 			</div>
 			<div class="form__field">
-				<button class="btn btn_darkgray btn_lg btn_block" data-animation="ripple-white">Add Another Line</button>					
+				<button class="btn btn_darkgray btn_lg btn_block" data-animation="ripple-white" disabled>Add Another Line</button>					
 			</div>
 		</form>
 		<div class="type form__type">
