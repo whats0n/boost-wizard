@@ -2,7 +2,8 @@
 title: 'Download to POS'
 heading: 'Please enter the Mobile Number and PIN to download the&nbsp;activation(s)&nbsp;to&nbsp;POS'
 types: [
-	{ img: 'img/epay-payment.svg', alt: 'ePay', title: 'ePay Payment' }
+	{ img: 'img/epay-payment.svg', alt: 'ePay', title: 'ePay Payment' },
+	{ icon: 'start-family', title: 'Start Family', disabled: 'disabled' }
 ]
 customSteps: [
 	{ title: 'Customer Type', description: 'New Customer' },
@@ -19,7 +20,7 @@ footer: {
 
 {% block content %}
 	
-	<div class="form form_type" data-type-buttons="1">
+	<div class="form form_type" data-type-buttons="2">
 		<form action="/">
 			<div class="form__field">
 				<label class="form__label">Mobile Number:</label>
@@ -41,9 +42,13 @@ footer: {
 			<div class="type__row">
 				{% for item in types %}
 					<div class="type__col">
-						<button class="type__btn" data-animation="ripple">
+						<button class="type__btn" data-animation="ripple" {{item.disabled}}>
 							<span class="type__btn-icon">
-								<img src="{{item.img}}" alt="{{item.alt}}">
+								{% if item.icon %}
+									{{mixins.icon(item.icon)}}
+								{% else %}
+									<img src="{{item.img}}" alt="{{item.alt}}">
+								{% endif %}
 							</span>
 							<span class="type__btn-title"><span>{{item.title | safe}}</span></span>
 						</button>

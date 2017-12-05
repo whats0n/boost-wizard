@@ -25,6 +25,10 @@
 		background: $white
 		user-select: none
 		transform: translate3d(0, 0, 0)
+		&:disabled,
+		&.is-disabled
+			opacity: 0.5
+			pointer-events: none
 		&-icon
 			display: block
 			font-size: 0
