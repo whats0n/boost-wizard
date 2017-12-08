@@ -7,22 +7,21 @@
 	<div class="modal-content__body">
 		{% for item in [
 			{
-				selected: 1
+				selected: 1,
+				phone: '(324) 123 7766'
 			},
 			{
-				selected: 2
+				selected: 2,
+				phone: '(324) 222 1122'
 			}
 		] %}
 			<div class="modal-item">
-				<label for="mobile-number-{{loop.index}}" class="modal-item__label">
+				<div class="modal-item__label">
 					<span>Mobile number:</span>
-				</label>
+				</div>
 				<div class="modal-item__row">
 					<div class="modal-item__col">
-						{{form.inputBox.call({
-							placeholder: 'Input Mobile Number',
-							inputAttrs: 'id="mobile-number-' + loop.index + '"'
-						})}}
+						<div class="field-box">{{item.phone}}</div>
 					</div>
 					<div class="modal-item__col">
 						{{form.selectBox.call({
