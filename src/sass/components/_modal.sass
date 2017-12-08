@@ -23,6 +23,9 @@
 	&_sm
 		.modal__container
 			max-width: 480px
+	&_md
+		.modal__container
+			max-width: 680px
 	&__container
 		display: inline-block
 		vertical-align: middle
@@ -60,3 +63,28 @@
 		min-width: 125px
 		&:not(:first-child)
 			margin-right: 20px
+
+.modal-item
+	position: relative
+	+ .modal-item
+		margin-top: 20px
+	&__label
+		position: absolute
+		top: 0
+		left: 0
+		width: 100px
+		line-height: 60px
+		span
+			display: inline-block
+			vertical-align: middle
+			font-size: 16px
+			line-height: 1.2
+		+ .modal-item__row
+			padding-left: 100px
+	&__row
+		margin: 0 -10px
+		+clr
+	&__col
+		float: left
+		padding: 0 10px
+		width: 50%

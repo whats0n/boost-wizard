@@ -12,16 +12,22 @@ modals: [
 		link: 'Current account is not enrolled into BoostUP!. Press OK button to proceed with transaction or Cancel to stay on current screen',
 		file: 'proceed-transaction',
 		classList: 'modal_sm'
+	},
+	{
+		target: 'check-mobile-numbers',
+		link: 'Please, check that account types are correct for mobile numbers below:',
+		file: 'check-mobile-numbers',
+		classList: 'modal_md'
 	}
 ]
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block modalsContent %}
-
+	<h2 style="padding: 20px 20px 0;">Modals:</h2>
 	<ul class="modals-list">
 		{% for item in modals %}
-			<li><a href="#" data-modal-target="{{item.target}}">{{item.link}}</a></li>
+			<li><a href="#" data-modal-target="{{item.target}}">{% if loop.index < 10 %}0{% endif %}{{loop.index}}. {{item.link}}</a></li>
 		{% endfor %}
 	</ul>
 

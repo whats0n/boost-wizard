@@ -1,0 +1,11 @@
+{% import "partials/_mixins.html" as mixins %}
+
+{% macro call(props) %}
+<div class="select-box {{props.classList}}">
+	<select class="simple-select select-box__select" {{props.selectAtts}}>
+		{% for item in props.options or [ 'Option 1', 'Option 2', 'Option 3', 'Option 4' ] %}
+			<option value="{{item}}" {% if loop.index == props.selected %}selected{% endif %}>{{item}}</option>
+		{% endfor %}
+	</select>
+</div>
+{% endmacro %}

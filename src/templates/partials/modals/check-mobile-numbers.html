@@ -1,0 +1,41 @@
+{% import "partials/_mixins.html" as mixins %}
+{% import "partials/form/_index.html" as form %}
+
+<!-- begin modal-content -->
+<div class="modal-content">
+	<div class="modal-content__heading">Please, check that account types are correct for&nbsp;mobile&nbsp;numbers below:</div>
+	<div class="modal-content__body">
+		{% for item in [
+			{
+				selected: 1
+			},
+			{
+				selected: 2
+			}
+		] %}
+			<div class="modal-item">
+				<label for="mobile-number-{{loop.index}}" class="modal-item__label">
+					<span>Mobile number:</span>
+				</label>
+				<div class="modal-item__row">
+					<div class="modal-item__col">
+						{{form.inputBox.call({
+							placeholder: 'Input Mobile Number',
+							inputAttrs: 'id="mobile-number-' + loop.index + '"'
+						})}}
+					</div>
+					<div class="modal-item__col">
+						{{form.selectBox.call({
+							selected: item.selected,
+							options: [ 'Primary', 'Additional' ]
+						})}}
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="modal-content__footer">
+		<button class="btn btn_darkgray text-uppercase modal-content__submit" data-modal-close="error-question" data-animation="ripple-white">Process</button>
+	</div>
+</div>
+<!-- end modal-content -->
