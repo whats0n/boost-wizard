@@ -1,5 +1,6 @@
 import svg4everybody from 'svg4everybody';
 svg4everybody();
+import select2 from 'select2';
 
 window.addEventListener('load', function() {
   //POLYFILLS
@@ -207,4 +208,18 @@ window.addEventListener('load', function() {
 
   })();
   //END RIPPLE
+
+  //BEGIN SELECT
+  (function() {
+    var $select = $('.js-select');
+    $select.each(function() {
+      const $this = $(this);
+      const $parent = $this.closest('.js-select-parent');
+      $this.select2({
+        minimumResultsForSearch: -1,
+        dropdownParent: $parent
+      });
+    });
+  })();
+  //END SELECT
 });
