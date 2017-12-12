@@ -22,20 +22,6 @@ footer: {
 	
 	<div class="form form_type" data-type-buttons="2">
 		<form action="/">
-			<div class="form__container">
-				<div class="form__field">
-					<label class="form__label">Mobile Number:</label>
-					{{form.inputBox.call({
-						placeholder: 'Input Mobile Number'
-					})}}
-				</div>
-				<div class="form__field">
-					<label class="form__label">PIN:</label>
-					{{form.inputBox.call({
-						placeholder: 'Input PIN'
-					})}}
-				</div>
-			</div>
 			<div class="form__field form__field_wide">
 				<div class="field">
 					<div class="field__row">
@@ -48,7 +34,7 @@ footer: {
 					</div>
 				</div>
 				<div class="fields">
-					{% for item in range(0,2) %}
+					{% for item in range(0,3) %}
 						<div class="field">
 							<div class="field__row">
 								<div class="field__col">
@@ -72,30 +58,34 @@ footer: {
 					{% endfor %}
 				</div>
 			</div>
-			<div class="form__container">
-				<div class="form__field">
-					<button class="btn btn_darkgray btn_lg btn_block" data-animation="ripple-white">Add Another Line</button>					
+			<div class="field">
+				<div class="field__row">
+					<div class="field__col">
+						<button class="btn btn_darkgray btn_lg btn_block" data-animation="ripple-white">Add Another Line</button>					
+					</div>
+					<div class="field__col">
+						<div class="type">
+							<div class="type__row">
+								{% for item in types %}
+									<div class="type__col">
+										<button class="type__btn" data-animation="ripple" type="button">
+											<span class="type__btn-icon">
+												{% if item.icon %}
+													{{mixins.icon(item.icon)}}
+												{% else %}
+													<img src="{{item.img}}" alt="{{item.alt}}">
+												{% endif %}
+											</span>
+											<span class="type__btn-title"><span>{{item.title | safe}}</span></span>
+										</button>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</form>
-		<div class="type form__type">
-			<div class="type__row">
-				{% for item in types %}
-					<div class="type__col">
-						<button class="type__btn" data-animation="ripple" type="button">
-							<span class="type__btn-icon">
-								{% if item.icon %}
-									{{mixins.icon(item.icon)}}
-								{% else %}
-									<img src="{{item.img}}" alt="{{item.alt}}">
-								{% endif %}
-							</span>
-							<span class="type__btn-title"><span>{{item.title | safe}}</span></span>
-						</button>
-					</div>
-				{% endfor %}
-			</div>
-		</div>
 	</div>
 
 {% endblock %}

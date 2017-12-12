@@ -5,27 +5,26 @@
 	color: $text
 	&_md
 		max-width: 800px
-		+sm
-			max-width: 460px
 	&_type
 		&[data-type-buttons="1"]
-			padding-right: 200px
 			max-width: 660px
+			.form__container
+				padding-right: 200px
 		&[data-type-buttons="2"]
-			padding-right: 400px
 			max-width: 860px
-			+md
-				padding-right: 0
-				max-width: 460px
+			.form__container
+				padding-right: 400px
 			.form__type
-				+md 
-					position: relative
-					top: auto 
-					left: auto
 		.form__type
 			position: absolute
 			top: -4px
 			right: 0
+			&_static
+				position: relative
+				top: auto
+				right: auto
+	&__container
+		padding-bottom: 30px
 	&__label
 		display: block
 		padding-bottom: 8px
@@ -89,12 +88,8 @@
 	&__row
 		margin: 0 -20px
 		font-size: 0
-		+sm
-			margin: 0
 		&:not(:last-child)
 			padding-bottom: 30px
-			+sm
-				padding-bottom: 0
 	&__col,
 	&__divider
 		display: inline-block
@@ -102,14 +97,8 @@
 	&__col
 		padding: 0 20px
 		width: 50%
-		+sm
-			display: block
-			padding: 0 0 30px
-			width: 100%
 		.form__field_line
 			padding: 18px 0
-			+sm 
-				padding: 0
 	&__divider
 		padding-bottom: 30px
 		font-size: 16px
@@ -120,30 +109,14 @@
 		margin: 0 -20px
 		width: 40px
 		text-align: center
-		+sm 
-			display: block
-			padding: 0 0 30px
-			margin: 0
-			width: auto
-			text-align: left
 	&__line
 		position: relative
 		padding-right: 54px
 		&:not(:last-child)
 			margin-bottom: 20px
-			+sm
-				padding-bottom: 30px
-				margin-bottom: 30px
-				border-bottom: 1px solid $lightGray
-		+sm
-			padding-right: 0
 	&__delete
 		position: absolute
 		right: -14px
 		bottom: 0
-		+sm
-			position: relative
-			right: auto
-			bottom: auto
 	&__type
 		padding-top: 30px
