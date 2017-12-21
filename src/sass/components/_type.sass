@@ -5,6 +5,15 @@
 		max-width: 720px
 	&[data-columns="4"]
 		max-width: 880px
+	&_bordered
+		padding: 20px
+		border: 1px solid #c6c6c6
+		+ .type_bordered
+			margin-top: 20px
+	&__title
+		padding: 20px 0
+		margin-top: -20px
+		+f(22, 22, null, 500)
 	&__row
 		margin: -20px
 		font-size: 0
@@ -29,6 +38,8 @@
 		&.is-disabled
 			opacity: 0.5
 			pointer-events: none
+		&.is-active
+			border-color: $orange
 		&-icon
 			display: block
 			font-size: 0

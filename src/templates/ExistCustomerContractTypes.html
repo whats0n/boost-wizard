@@ -2,12 +2,24 @@
 title: 'Contract Type'
 heading: 'Please choose contract type'
 types: [
-	{ icon: 'activation-add-a-line', title: 'Activation<br>Add-A-Line' },
-	{ icon: 'port-in-add-a-line', title: 'Port-In<br>Add-A-Line' },
-	{ icon: 'byod-add-a-line', title: 'BYOD<br>Add-A-Line' },
-	{ icon: 'upgrade-add-a-line', title: 'Upgrade<br>Add-A-Line' },
-	{ icon: 'upgrade', title: 'Upgrade' },
-	{ icon: 'boost-up', title: 'BoostUp!' }
+	{
+		title: 'Add A Line',
+		items: [
+			{ icon: 'activation-add-a-line', title: 'Activation<br>Add-A-Line' },
+			{ icon: 'port-in-add-a-line', title: 'Port-In<br>Add-A-Line' },
+			{ icon: 'byod-add-a-line', title: 'BYOD<br>Add-A-Line' },
+			{ icon: 'upgrade-add-a-line', title: 'Upgrade<br>Add-A-Line' }
+		]
+	},
+	{
+		items: [
+			{ icon: 'upgrade', title: 'Upgrade' },
+			{ icon: 'boost-up', title: 'BoostUp!' },
+			{ icon: 'plan-change', title: 'Plan Change' },
+			{ icon: 'feature-change', title: 'Feature Change' }
+		]
+	}
+	
 ]
 customSteps: [
 	{ title: 'Customer Type', description: 'Existing Customer' },
@@ -21,17 +33,22 @@ activeStep: 2
 
 {% block content %}
 	
-	<div class="type" data-columns="4">
-		<div class="type__row">
-			{% for item in types %}
-				<div class="type__col">
-					<button class="type__btn" data-animation="ripple">
-						<span class="type__btn-icon">{{mixins.icon(item.icon)}}</span>
-						<span class="type__btn-title"><span>{{item.title | safe}}</span></span>
-					</button>
-				</div>
-			{% endfor %}
+	{% for box in types %}
+		<div class="type type_bordered" data-columns="4">
+			{% if box.title %}
+				<div class="type__title">{{box.title}}</div>
+			{% endif %}
+			<div class="type__row">
+				{% for item in box.items %}
+					<div class="type__col">
+						<button class="type__btn" data-animation="ripple">
+							<span class="type__btn-icon">{{mixins.icon(item.icon)}}</span>
+							<span class="type__btn-title"><span>{{item.title | safe}}</span></span>
+						</button>
+					</div>
+				{% endfor %}
+			</div>
 		</div>
-	</div>
+	{% endfor %}
 
 {% endblock %}
