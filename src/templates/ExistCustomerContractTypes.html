@@ -36,7 +36,7 @@ activeStep: 2
 	{% for box in types %}
 		<div class="type type_bordered" data-columns="4">
 			{% if box.title %}
-				<div class="type__title">{{box.title}}</div>
+				<div class="type__title"><span>{{box.title}}</span></div>
 			{% endif %}
 			<div class="type__row">
 				{% for item in box.items %}

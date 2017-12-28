@@ -1764,11 +1764,19 @@ input::-ms-clear {
 }
 
 .type__title {
-  padding: 20px 0;
-  margin-top: -20px;
+  padding: 0 0 20px;
+  margin-top: -31px;
   font-size: 22px;
   font-weight: 500;
   line-height: 1;
+  text-align: left;
+}
+
+.type__title span {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 15px;
+  background: #fff;
 }
 
 .type__row {
