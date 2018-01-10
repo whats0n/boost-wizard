@@ -24,6 +24,7 @@
 		margin: -20px
 		font-size: 0
 	&__col
+		position: relative
 		display: inline-block
 		vertical-align: top
 		width: 200px
@@ -31,6 +32,7 @@
 		&_md
 			width: 240px
 	&__btn
+		position: relative
 		display: block
 		padding: 20px 5px 10px
 		border: 2px solid $text
@@ -47,6 +49,11 @@
 		&.is-active
 			border-color: $orange
 			background: rgba($orange, 0.1)
+		&:hover
+			~ .type__tooltip
+				opacity: 1
+				visibility: visible
+				transform: translate3d(-50%,0,0)
 		&-icon
 			display: block
 			font-size: 0
@@ -73,3 +80,31 @@
 				vertical-align: middle
 				font-size: 16px
 				line-height: 1
+	&__tooltip
+		position: absolute
+		z-index: 20
+		top: 0
+		left: 50%
+		padding: 15px
+		border: 2px solid $darkGray
+		width: 100%
+		opacity: 0
+		visibility: hidden
+		background: $white
+		font-size: 14px
+		line-height: 1.2
+		transform: translate3d(-50%,10px,0)
+		transition: opacity 0.3s, visibility 0.3s, transform 0.3s
+		pointer-events: none
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			top: 100%
+			left: 50%
+			transform: translate3d(-50%,0,0)
+		&:before
+			+arr(24, 12, $darkGray, b)
+		&:after
+			margin-top: -3px
+			+arr(24, 12, $white, b)

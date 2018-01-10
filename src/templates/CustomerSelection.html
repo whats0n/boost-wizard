@@ -2,9 +2,9 @@
 title: 'Customer Type'
 heading: 'Please choose account type'
 types: [
-	{ icon: 'new-customer', title: 'New Account' },
-	{ icon: 'existing-customer', title: 'Existing Account' },
-	{ img: 'img/epay-payment.svg', alt: 'ePay', title: 'ePay Payment', classList: 'is-active' }
+	{ icon: 'new-customer', title: 'New Account', tooltip: 'New Customer/Primary Line Creation' },
+	{ icon: 'existing-customer', title: 'Existing Account', tooltip: 'Account changes and adding secondary lines' },
+	{ img: 'img/epay-payment.svg', alt: 'ePay', title: 'ePay Payment', classList: 'is-active', tooltip: 'Account payments' }
 ]
 footer: { noPrev: true }
 ---
@@ -26,6 +26,11 @@ footer: { noPrev: true }
 						</span>
 						<span class="type__btn-title"><span>{{item.title}}</span></span>
 					</button>
+					{% if item.tooltip %}
+						<div class="type__tooltip">
+							<p>{{item.tooltip}}</p>
+						</div>
+					{% endif %}
 				</div>
 			{% endfor %}
 		</div>
