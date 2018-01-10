@@ -37,6 +37,15 @@ footer: {
 					{% for item in range(0,3) %}
 						<div class="field">
 							<div class="field__row">
+								{% if loop.first %}
+									<div class="field__icon">
+										{{mixins.icon('primary-line')}}
+									</div>
+								{% else %}
+									<div class="field__icon">
+										{{mixins.icon('additional-line')}}
+									</div>
+								{% endif %}
 								<div class="field__col">
 									{{form.inputBox.call({
 										placeholder: 'Input Mobile Number'
