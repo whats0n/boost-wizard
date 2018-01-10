@@ -790,6 +790,12 @@ a {
   fill: initial;
 }
 
+.icon-additional-line {
+  width: 0.94em;
+  height: 1em;
+  fill: #706F6F;
+}
+
 .icon-boost-portal {
   width: 1.52em;
   height: 1em;
@@ -872,6 +878,12 @@ a {
   width: 0.86em;
   height: 1em;
   fill: initial;
+}
+
+.icon-primary-line {
+  width: 0.94em;
+  height: 1em;
+  fill: #706F6F;
 }
 
 .icon-sales-quote {
@@ -1465,6 +1477,7 @@ input::-ms-clear {
 
 .field {
   position: relative;
+  padding-left: 40px;
   padding-right: 60px;
 }
 
@@ -1504,6 +1517,31 @@ input::-ms-clear {
   vertical-align: middle;
   padding: 0 10px;
   width: 50%;
+}
+
+.field__icon {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  font-size: 0;
+}
+
+.field__icon img {
+  height: 1em;
+  font-size: 30px;
+}
+
+.field__icon .icon {
+  fill: #706F6F;
+  font-size: 30px;
+}
+
+.field__icon .icon-primary-line {
+  color: #F7D307;
+}
+
+.field__icon .icon-additional-line {
+  color: #EC0606;
 }
 
 .steps {
@@ -1945,6 +1983,7 @@ input::-ms-clear {
 
 .modal {
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
   right: 0;
