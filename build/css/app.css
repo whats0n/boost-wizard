@@ -2229,6 +2229,10 @@ input::-ms-clear {
   transform: translate3d(-50%, 0, 0);
 }
 
+.tooltip p + ol {
+  margin-top: 10px;
+}
+
 .tooltip ol {
   list-style-type: decimal;
   list-style-position: inside;
