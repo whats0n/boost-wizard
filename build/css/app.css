@@ -856,6 +856,12 @@ a {
   fill: #F39026;
 }
 
+.icon-info {
+  width: 1em;
+  height: 1em;
+  fill: initial;
+}
+
 .icon-new-customer {
   width: 1em;
   height: 1em;
@@ -1810,6 +1816,14 @@ input::-ms-clear {
   text-align: left;
 }
 
+.type__title_label {
+  font-size: 0;
+}
+
+.type__title_label > span {
+  font-size: 22px;
+}
+
 .type__title span {
   display: inline-block;
   vertical-align: top;
@@ -1860,12 +1874,6 @@ input::-ms-clear {
   background: rgba(255, 100, 49, 0.1);
 }
 
-.type__btn:hover ~ .type__tooltip {
-  opacity: 1;
-  visibility: visible;
-  transform: translate3d(-50%, 0, 0);
-}
-
 .type__btn-icon {
   display: block;
   font-size: 0;
@@ -1912,47 +1920,16 @@ input::-ms-clear {
   line-height: 1;
 }
 
-.type__tooltip {
-  position: absolute;
-  z-index: 20;
+.type .type__tooltip {
   top: 0;
-  left: 50%;
-  padding: 15px;
-  border: 2px solid #2e2e2e;
-  width: 100%;
-  opacity: 0;
-  visibility: hidden;
-  background: #fff;
-  font-size: 14px;
-  line-height: 1.2;
-  transform: translate3d(-50%, 10px, 0);
-  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-  pointer-events: none;
-}
-
-.type__tooltip:before, .type__tooltip:after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
+  bottom: auto;
   transform: translate3d(-50%, 0, 0);
 }
 
-.type__tooltip:before {
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 12px 12px 0 12px;
-  border-color: #2e2e2e transparent transparent transparent;
-}
-
-.type__tooltip:after {
-  margin-top: -3px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 12px 12px 0 12px;
-  border-color: #fff transparent transparent transparent;
+.type .type__info-win {
+  padding: 0 15px;
+  margin: 0 -15px;
+  background: #fff;
 }
 
 .field-box {
@@ -2169,6 +2146,121 @@ input::-ms-clear {
   float: left;
   padding: 0 10px;
   width: 50%;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 20;
+  left: 50%;
+  padding: 15px;
+  border: 2px solid #6e6e6e;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  transform: translate3d(-50%, 0, 0);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+
+.tooltip_wide {
+  min-width: 320px;
+}
+
+.tooltip_top {
+  bottom: 100%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.tooltip_top:before, .tooltip_top:after {
+  top: 100%;
+}
+
+.tooltip_top:before {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 12px 12px 0 12px;
+  border-color: #6e6e6e transparent transparent transparent;
+}
+
+.tooltip_top:after {
+  margin-top: -3px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 12px 12px 0 12px;
+  border-color: #fff transparent transparent transparent;
+}
+
+.tooltip_bottom {
+  top: 100%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.tooltip_bottom:before, .tooltip_bottom:after {
+  bottom: 100%;
+}
+
+.tooltip_bottom:before {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 12px 12px 12px;
+  border-color: transparent transparent #6e6e6e transparent;
+}
+
+.tooltip_bottom:after {
+  margin-bottom: -3px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 12px 12px 12px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.tooltip:before, .tooltip:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.tooltip ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+.tooltip-wrapper {
+  position: relative;
+}
+
+.tooltip-control:hover ~ .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip-control:hover ~ .tooltip_bottom {
+  transform: translate3d(-50%, 10px, 0);
+}
+
+.tooltip-control:hover ~ .tooltip_top {
+  transform: translate3d(-50%, -10px, 0);
+}
+
+.info-win {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.info-win .icon-info {
+  fill: currentColor;
+  font-size: 22px;
 }
 
 @media (prefers-reduced-motion: reduce) {

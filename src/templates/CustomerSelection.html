@@ -16,7 +16,7 @@ footer: { noPrev: true }
 		<div class="type__row">
 			{% for item in types %}
 				<div class="type__col">
-					<button class="type__btn {{item.classList}}" data-animation="ripple">
+					<button class="type__btn {{item.classList}} tooltip-control" data-animation="ripple">
 						<span class="type__btn-icon">
 							{% if item.icon %}
 								{{mixins.icon(item.icon)}}
@@ -27,7 +27,7 @@ footer: { noPrev: true }
 						<span class="type__btn-title"><span>{{item.title}}</span></span>
 					</button>
 					{% if item.tooltip %}
-						<div class="type__tooltip">
+						<div class="tooltip tooltip_top type__tooltip">
 							<p>{{item.tooltip}}</p>
 						</div>
 					{% endif %}
