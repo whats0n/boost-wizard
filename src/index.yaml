@@ -1,17 +1,5 @@
-ProjectTitle: boost-wizard
+ProjectTitle: metro-pcs
 
 PageList:
-- file: CustomerSelection.html
-- file: NewCustomerContractTypes.html
-- file: ExistCustomerContractTypes.html
-- file: ExistCustomerContractTypesAddLine.html
-- file: AccountMaintenance.html
-- file: PortInEligibility.html
-- file: UpgradeEligibility.html
-- file: ChooseAction.html
-- file: LoadToPOSNewCustNoAddLines.html
-- file: LoadToPOSExistCustNoAddLines.html
-- file: LoadToPOSExistCustWithAddLines.html
-- file: LoadToPOSExistCustWithAddLines-v2.html
-- file: LoadToPOSExistCustWithAddLines-v3.html
-- file: modals.html
+- file: about.html
+- file: upgrade.html
