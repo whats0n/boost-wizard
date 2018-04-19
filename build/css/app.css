@@ -92,10 +92,38 @@ a {
 }
 
 @font-face {
-  font-family: "Boost Neo Black";
+  font-family: "Boost Next";
   font-style: normal;
-  font-weight: 900;
-  src: local("Boost Neo Black"), local("Boost-Neo-Black"), url("../fonts/boost_neo-black.woff2") format("woff2"), url("../fonts/boost_neo-black.woff") format("woff");
+  font-weight: 100;
+  src: local("Boost Next Thin"), local("BoostNext-Thin"), url("../fonts/BoostNext-Thin.woff2") format("woff2"), url("../fonts/BoostNext-Thin.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Boost Next";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Boost Next Light"), local("BoostNext-Light"), url("../fonts/BoostNext-Light.woff2") format("woff2"), url("../fonts/BoostNext-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Boost Next";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Boost Next Regular"), local("BoostNext-Regular"), url("../fonts/BoostNext-Regular.woff2") format("woff2"), url("../fonts/BoostNext-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Boost Next";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Boost Next Bold"), local("BoostNext-Bold"), url("../fonts/BoostNext-Bold.woff2") format("woff2"), url("../fonts/BoostNext-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Boost Next";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Boost Next Heavy"), local("BoostNext-Heavy"), url("../fonts/BoostNext-Heavy.woff2") format("woff2"), url("../fonts/BoostNext-Heavy.woff") format("woff");
 }
 
 .icon-account-maintenance {
@@ -289,12 +317,12 @@ body {
 }
 
 .label {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 strong {
-  font-family: "Boost Neo Black";
-  font-weight: 900;
+  font-family: "Boost Next";
+  font-weight: 800;
 }
 
 .btn {
@@ -308,9 +336,9 @@ strong {
   height: 38px;
   color: #2b2b2b;
   background: #d5d5d5;
-  font-family: "Boost Neo Black";
+  font-family: "Boost Next";
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 700;
   line-height: 38px;
   letter-spacing: .001em;
   text-align: center;
@@ -446,8 +474,11 @@ strong {
 }
 
 .box__label {
-  padding-top: 1px;
-  width: 50%;
+  width: 60%;
+}
+
+.box__value {
+  width: 40%;
 }
 
 .content {
@@ -464,7 +495,7 @@ strong {
   vertical-align: top;
   padding: 10px;
   width: 50%;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
 }
 
 .content__label {
@@ -535,7 +566,7 @@ strong {
 
 .about__logo img {
   height: 38px;
-  font-family: "Boost Neo Black";
+  font-family: "Boost Next";
   font-size: 2rem;
   line-height: 1.1875;
   text-transform: uppercase;
@@ -565,15 +596,15 @@ strong {
 }
 
 .upgrade__title {
-  font-family: "Boost Neo Black";
+  font-family: "Boost Next";
   font-size: 48px;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1.2;
 }
 
 .upgrade__description {
   color: #2b2b2b;
-  font-family: "Boost Neo Black";
+  font-family: "Boost Next";
   font-size: 22px;
   line-height: 1.2;
 }
