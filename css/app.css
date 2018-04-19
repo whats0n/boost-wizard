@@ -2306,12 +2306,39 @@ input::-ms-clear {
 }
 
 .promo {
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .promo__inner {
+  position: relative;
+  padding: 20px;
   margin: 0 auto;
+  border: 1px solid #c6c6c6;
   max-width: 560px;
+}
+
+.promo__title {
+  padding: 0 0 20px;
+  margin-top: -31px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: left;
+}
+
+.promo__title_label {
+  font-size: 0;
+}
+
+.promo__title_label > span {
+  font-size: 22px;
+}
+
+.promo__title span {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 15px;
+  background: #fff;
 }
 
 .promo__row {
