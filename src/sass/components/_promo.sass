@@ -1,8 +1,25 @@
 .promo
-	padding-top: 20px
+	padding-top: 40px
 	&__inner
+		position: relative
+		padding: 20px
 		margin: 0 auto
+		border: 1px solid #c6c6c6
 		max-width: 560px
+	&__title
+		padding: 0 0 20px
+		margin-top: -31px
+		+f(22, 22, null, 500)
+		text-align: left
+		&_label
+			font-size: 0
+			> span 
+				font-size: 22px
+		span
+			display: inline-block
+			vertical-align: top
+			padding: 0 15px
+			background: $white
 	&__row
 		position: relative
 		padding-right: 140px

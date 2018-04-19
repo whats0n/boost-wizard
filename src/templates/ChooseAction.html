@@ -13,7 +13,6 @@ customSteps: [
 	{ title: 'Download to POS' }
 ]
 activeStep: 3
-boxClassList: 'box_with-promo'
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -32,34 +31,35 @@ boxClassList: 'box_with-promo'
 		</div>
 	</div>
 
-{% endblock %}
-
-{% block underContent %}
-<!-- begin promo -->
-<div class="promo">
-	<div class="promo__inner">
-		<div class="promo__row">
-			<div class="promo__label form__label">Enter Promo Code:</div>
-			<div class="promo__field">
-				{{form.inputBox.call({
-					placeholder: 'Input Promo Code',
-					inputClassList: 'simple-input_sm'
-				})}}
+	<!-- begin promo -->
+	<div class="promo">
+		<div class="promo__inner">
+			<div class="promo__title">
+				<span>Apply Promotion</span>
 			</div>
-			<div class="promo__btn">
-				<button class="btn btn_block btn_darkgray" data-animation="ripple">Check</button>
+			<div class="promo__row">
+				<div class="promo__label form__label">Enter Promo Code:</div>
+				<div class="promo__field">
+					{{form.inputBox.call({
+						placeholder: 'Input Promo Code',
+						inputClassList: 'simple-input_sm'
+					})}}
+				</div>
+				<div class="promo__btn">
+					<button class="btn btn_block btn_darkgray" data-animation="ripple">Check</button>
+				</div>
 			</div>
-		</div>
-		<div class="promo__row">
-			<div class="promo__label form__label">Result:</div>
-			<div class="promo__field">
-				<div class="form__text color-green">{{mixins.icon('check')}} Promo Code is valid</div>
-			</div>
-			<div class="promo__btn">
-				<button class="btn btn_block btn_primary" data-animation="ripple">Redeem</button>
+			<div class="promo__row">
+				<div class="promo__label form__label">Result:</div>
+				<div class="promo__field">
+					<div class="form__text color-green">{{mixins.icon('check')}} Promo Code is valid</div>
+				</div>
+				<div class="promo__btn">
+					<button class="btn btn_block btn_primary" data-animation="ripple">Redeem</button>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<!-- end promo -->
+	<!-- end promo -->
+
 {% endblock %}
