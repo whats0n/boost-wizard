@@ -565,6 +565,7 @@ strong {
 }
 
 .about__logo img {
+  width: 201px;
   height: 38px;
   font-family: "Boost Next";
   font-size: 2rem;
@@ -644,6 +645,7 @@ strong {
 }
 
 .upgrade__logo img {
+  width: 138px;
   height: 26px;
   font-size: 1.625rem;
   line-height: 1;
