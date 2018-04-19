@@ -8,7 +8,8 @@ types: [
 			{ icon: 'activation-add-a-line', title: 'Activation<br>Add-A-Line' },
 			{ icon: 'port-in-add-a-line', title: 'Port-In<br>Add-A-Line' },
 			{ icon: 'byod-add-a-line', title: 'BYOD<br>Add-A-Line' },
-			{ icon: 'upgrade-add-a-line', title: 'Upgrade<br>Add-A-Line' }
+			{ icon: 'upgrade-add-a-line', title: 'Upgrade<br>Add-A-Line' },
+			{ icon: 'esn-change', title: 'IMEI/ESN Change' }
 		]
 	},
 	{
@@ -16,7 +17,8 @@ types: [
 			{ icon: 'upgrade', title: 'Upgrade' },
 			{ icon: 'boost-up', title: 'BoostUp!' },
 			{ icon: 'plan-change', title: 'Plan Change' },
-			{ icon: 'feature-change', title: 'Feature Change' }
+			{ icon: 'feature-change', title: 'Feature Change' },
+			{ icon: 'esn-change', title: 'IMEI/ESN Change' }
 		]
 	}
 	
@@ -34,7 +36,7 @@ activeStep: 2
 {% block content %}
 	
 	{% for box in types %}
-		<div class="type type_bordered" data-columns="4">
+		<div class="type type_bordered" data-columns="5">
 			{% if box.title %}
 				<div class="type__title type__title_label">
 					<span>{{box.title}}</span>
