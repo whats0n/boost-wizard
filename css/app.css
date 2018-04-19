@@ -844,6 +844,12 @@ a {
   fill: #E5231F;
 }
 
+.icon-esn-change {
+  width: 0.55em;
+  height: 1em;
+  fill: initial;
+}
+
 .icon-existing-customer {
   width: 1em;
   height: 1em;
@@ -1098,6 +1104,16 @@ body {
   background: #2e2e2e;
 }
 
+.btn_primary {
+  color: #fff;
+  background: #FF6431;
+}
+
+.btn_primary:active {
+  color: #fff;
+  background: #FF6431;
+}
+
 .btn:disabled, .btn.is-disabled {
   opacity: 0.5;
   pointer-events: none;
@@ -1140,6 +1156,10 @@ body {
 
 .simple-input:focus {
   border-color: #2e99db;
+}
+
+.simple-input_sm {
+  height: 40px;
 }
 
 input::-ms-clear {
@@ -1755,6 +1775,10 @@ input::-ms-clear {
   height: 100%;
 }
 
+.box_with-promo .box__inner {
+  max-height: calc(100vh - 410px);
+}
+
 .box__heading {
   position: absolute;
   top: -1px;
@@ -1802,6 +1826,14 @@ input::-ms-clear {
 
 .type[data-columns="4"] {
   max-width: 880px;
+}
+
+.type[data-columns="5"] {
+  max-width: 1080px;
+}
+
+.type[data-columns="5"] .type__col {
+  max-width: 20%;
 }
 
 .type_bordered {
@@ -2271,6 +2303,46 @@ input::-ms-clear {
 .info-win .icon-info {
   fill: currentColor;
   font-size: 22px;
+}
+
+.promo {
+  padding-top: 20px;
+}
+
+.promo__inner {
+  margin: 0 auto;
+  max-width: 560px;
+}
+
+.promo__row {
+  position: relative;
+  padding-right: 140px;
+  font-size: 0;
+}
+
+.promo__row:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.promo__label, .promo__field {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.promo__label {
+  padding-bottom: 0;
+  width: 40%;
+}
+
+.promo__field {
+  width: 60%;
+}
+
+.promo__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
 }
 
 @media (prefers-reduced-motion: reduce) {
