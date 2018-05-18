@@ -16,3 +16,4 @@ PageList:
 - file: LoadToPOSExistCustWithAddLines-v3.html
 - file: IMEIESNChange.html
 - file: modals.html
+- file: loader.html
