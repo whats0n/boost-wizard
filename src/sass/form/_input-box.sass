@@ -10,6 +10,7 @@
 		opacity: 1
 	&__clear
 		position: absolute
+		z-index: 2
 		top: 0
 		right: 0
 		bottom: 0
@@ -30,9 +31,17 @@
 			transform: translate3d(-50%,-50%,0)
 		+ .input-box__input
 			padding-right: 60px
-	&__error-message
+	&__error-message,
+	&__message
 		position: absolute
 		top: 100%
 		left: 0
 		right: 0
+	&__error-message
 		+text-overflow
+	&__message
+		padding: 5px 0 4px
+		margin-right: -50px
+		color: lighten($darkGray, 50%)
+		font-size: 14px
+		line-height: 1.2

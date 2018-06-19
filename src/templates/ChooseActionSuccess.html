@@ -42,11 +42,16 @@ activeStep: 3
 				<div class="promo__field">
 					{{form.inputBox.call({
 						placeholder: 'Input Promo Code',
-						inputClassList: 'simple-input_sm'
+						inputClassList: 'simple-input_sm',
+						inputAttrs: 'disabled',
+						message: [
+							'Q2 2018 Facebook Code Promo',
+							'The coupon was successfully redeemed.'
+						]
 					})}}
 				</div>
 				<div class="promo__btn">
-				{{mixins.icon('check-mark', 'promo__check')}}
+					{{mixins.icon('check-mark', 'promo__check')}}
 				</div>
 			</div>
 		</div>

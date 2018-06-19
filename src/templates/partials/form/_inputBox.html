@@ -13,5 +13,12 @@
 	{% if props.errorMessage %}
 		<div class="error-message input-box__error-message {{props.errorClassList}}">{{props.errorMessage}}</div>
 	{% endif %}
+	{% if props.message %}
+		<div class="input-box__message">
+			{% for item in props.message %}
+				<p>{{item | safe}}</p>
+			{% endfor %}
+		</div>
+	{% endif %}
 </div>
 {% endmacro %}
