@@ -9,6 +9,7 @@ PageList:
 - file: PortInEligibility.html
 - file: UpgradeEligibility.html
 - file: ChooseAction.html
+- file: ChooseActionSuccess.html
 - file: LoadToPOSNewCustNoAddLines.html
 - file: LoadToPOSExistCustNoAddLines.html
 - file: LoadToPOSExistCustWithAddLines.html

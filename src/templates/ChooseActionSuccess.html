@@ -41,14 +41,12 @@ activeStep: 3
 				<div class="promo__label form__label">Apply Promotion:</div>
 				<div class="promo__field">
 					{{form.inputBox.call({
-						classList: 'is-error',
 						placeholder: 'Input Promo Code',
-						inputClassList: 'simple-input_sm',
-						errorMessage: 'The coupon is not valid'
+						inputClassList: 'simple-input_sm'
 					})}}
 				</div>
 				<div class="promo__btn">
-					<button class="btn btn_block btn_primary" data-animation="ripple">Redeem</button>
+				{{mixins.icon('check-mark', 'promo__check')}}
 				</div>
 			</div>
 		</div>
