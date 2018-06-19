@@ -1164,6 +1164,10 @@ body {
   border-color: #2e99db;
 }
 
+.simple-input:disabled {
+  opacity: 0.7;
+}
+
 .simple-input_sm {
   height: 40px;
 }
@@ -1190,6 +1194,7 @@ input::-ms-clear {
 
 .input-box__clear {
   position: absolute;
+  z-index: 2;
   top: 0;
   right: 0;
   bottom: 0;
@@ -1218,14 +1223,25 @@ input::-ms-clear {
   padding-right: 60px;
 }
 
-.input-box__error-message {
+.input-box__error-message, .input-box__message {
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
+}
+
+.input-box__error-message {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.input-box__message {
+  padding: 5px 0 4px;
+  margin-right: -50px;
+  color: #aeaeae;
+  font-size: 14px;
+  line-height: 1.2;
 }
 
 .select2-container--default .select2-selection--multiple,
