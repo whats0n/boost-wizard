@@ -2394,6 +2394,9 @@ input::-ms-clear {
 .promo__label {
   padding-bottom: 0;
   width: 40%;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
 .promo__field {
@@ -2415,6 +2418,32 @@ input::-ms-clear {
   margin-top: -0.5em;
   fill: #22B745;
   font-size: 32px;
+}
+
+.promo__body {
+  padding-top: 30px;
+}
+
+.promo__body .promo__row:not(:first-child) {
+  margin-top: 40px;
+}
+
+.promo__subtitle {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.promo__error, .promo__success {
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.promo__error {
+  color: #ec4a41;
 }
 
 .loader {
