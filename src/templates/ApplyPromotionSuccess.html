@@ -1,5 +1,5 @@
 ---
-title: 'New Page'
+title: 'Apply Promotion'
 heading: 'Lorem ipsum dolor sit amet.'
 types: [
 	{ icon: 'boost-portal', title: 'Boost Portal' },
@@ -28,18 +28,17 @@ activeStep: 3
 					{{form.inputBox.call({
 						placeholder: 'Input Promo Code',
 						inputClassList: 'simple-input_sm',
-						inputAttrs: 'disabled',
-						message: [
-							'Q2 2018 Facebook Code Promo',
-							'The coupon was successfully redeemed.'
-						]
+						inputAttrs: 'disabled'
 					})}}
 				</div>
 				<div class="promo__btn">
 					{{mixins.icon('check-mark', 'promo__check')}}
 				</div>
 			</div>
-			<div class="promo__success">Text for success message</div>
+			<div class="promo__success">
+				<p>Q2 2018 Facebook Code Promo</p>
+				<p>The coupon was successfully redeemed.</p>
+			</div>
 		</div>
 	</div>
 	<!-- end promo -->
