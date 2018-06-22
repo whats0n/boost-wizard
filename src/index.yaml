@@ -8,6 +8,8 @@ PageList:
 - file: AccountMaintenance.html
 - file: PortInEligibility.html
 - file: UpgradeEligibility.html
+- file: ApplyPromotion.html
+- file: ApplyPromotionSuccess.html
 - file: ChooseAction.html
 - file: ChooseActionSuccess.html
 - file: LoadToPOSNewCustNoAddLines.html

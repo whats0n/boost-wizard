@@ -1,6 +1,6 @@
 ---
-title: 'Choose Action'
-heading: 'Please choose the Sales Quote/Preauthorization tool, or add an additional line'
+title: 'New Page'
+heading: 'Lorem ipsum dolor sit amet.'
 types: [
 	{ icon: 'boost-portal', title: 'Boost Portal' },
 	{ icon: 'have-number', title: 'Already Have Phone&nbsp;Number/PTN' },
@@ -9,6 +9,7 @@ types: [
 customSteps: [
 	{ title: 'Customer Type', description: 'New Customer' },
 	{ title: 'Contract Type', description: 'Activation' },
+	{ title: 'Apply promotion', description: 'Applied' },
 	{ title: 'Choose action' },
 	{ title: 'Download to POS' }
 ]
@@ -17,23 +18,7 @@ activeStep: 3
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	
-	<div class="type">
-		<div class="type__row">
-			{% for item in types %}
-				<div class="type__col">
-					<button class="type__btn" data-animation="ripple">
-						<span class="type__btn-icon">{{mixins.icon(item.icon)}}</span>
-						<span class="type__btn-title"><span>{{item.title | safe}}</span></span>
-					</button>
-				</div>
-			{% endfor %}
-		</div>
-	</div>
 
-{% endblock %}
-
-{% block underContent %}
 	<!-- begin promo -->
 	<div class="promo">
 		<div class="promo__inner">
@@ -41,17 +26,22 @@ activeStep: 3
 				<div class="promo__label">Apply Promotion:</div>
 				<div class="promo__field">
 					{{form.inputBox.call({
-						classList: 'is-error',
 						placeholder: 'Input Promo Code',
 						inputClassList: 'simple-input_sm',
-						errorMessage: 'The coupon is not valid'
+						inputAttrs: 'disabled',
+						message: [
+							'Q2 2018 Facebook Code Promo',
+							'The coupon was successfully redeemed.'
+						]
 					})}}
 				</div>
 				<div class="promo__btn">
-					<button class="btn btn_block btn_primary" data-animation="ripple">Redeem</button>
+					{{mixins.icon('check-mark', 'promo__check')}}
 				</div>
 			</div>
+			<div class="promo__success">Text for success message</div>
 		</div>
 	</div>
 	<!-- end promo -->
+
 {% endblock %}

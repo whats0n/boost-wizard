@@ -1,6 +1,6 @@
 ---
-title: 'Choose Action'
-heading: 'Please choose the Sales Quote/Preauthorization tool, or add an additional line'
+title: 'New Page'
+heading: 'Lorem ipsum dolor sit amet.'
 types: [
 	{ icon: 'boost-portal', title: 'Boost Portal' },
 	{ icon: 'have-number', title: 'Already Have Phone&nbsp;Number/PTN' },
@@ -9,6 +9,7 @@ types: [
 customSteps: [
 	{ title: 'Customer Type', description: 'New Customer' },
 	{ title: 'Contract Type', description: 'Activation' },
+	{ title: 'Apply promotion', description: 'Applied' },
 	{ title: 'Choose action' },
 	{ title: 'Download to POS' }
 ]
@@ -18,22 +19,6 @@ activeStep: 3
 
 {% block content %}
 	
-	<div class="type">
-		<div class="type__row">
-			{% for item in types %}
-				<div class="type__col">
-					<button class="type__btn" data-animation="ripple">
-						<span class="type__btn-icon">{{mixins.icon(item.icon)}}</span>
-						<span class="type__btn-title"><span>{{item.title | safe}}</span></span>
-					</button>
-				</div>
-			{% endfor %}
-		</div>
-	</div>
-
-{% endblock %}
-
-{% block underContent %}
 	<!-- begin promo -->
 	<div class="promo">
 		<div class="promo__inner">
@@ -51,7 +36,36 @@ activeStep: 3
 					<button class="btn btn_block btn_primary" data-animation="ripple">Redeem</button>
 				</div>
 			</div>
+			<div class="promo__body">
+				<div class="promo__subtitle">Please provide additional information:</div>
+				<div class="promo__container">
+					<div class="promo__row">
+						<div class="promo__label">ESN:</div>
+						<div class="promo__field">
+							{{form.inputBox.call({
+								classList: 'is-error',
+								placeholder: 'Input ESN',
+								inputClassList: 'simple-input_sm',
+								errorMessage: 'ESN is not valid'
+							})}}
+						</div>
+					</div>
+					<div class="promo__row">
+						<div class="promo__label">E-mail:</div>
+						<div class="promo__field">
+							{{form.inputBox.call({
+								classList: 'is-error',
+								placeholder: 'Input E-mail',
+								inputClassList: 'simple-input_sm',
+								errorMessage: 'E-mail is not valid'
+							})}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="promo__error">Text for error message</div>
 		</div>
 	</div>
 	<!-- end promo -->
+
 {% endblock %}
