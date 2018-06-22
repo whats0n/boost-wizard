@@ -2425,7 +2425,16 @@ input::-ms-clear {
 }
 
 .promo__body .promo__row:not(:first-child) {
-  margin-top: 40px;
+  margin-top: 20px;
+}
+
+.promo__body .input-box__error-message {
+  top: 50%;
+  left: 100%;
+  right: auto;
+  width: auto;
+  -ms-transform: translate(10px, -50%);
+  transform: translate(10px, -50%);
 }
 
 .promo__subtitle {
@@ -2436,7 +2445,7 @@ input::-ms-clear {
 }
 
 .promo__error, .promo__success {
-  margin-top: 50px;
+  margin-top: 20px;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.2;
