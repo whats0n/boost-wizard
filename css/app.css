@@ -821,9 +821,9 @@ a {
 }
 
 .icon-check-mark {
-  width: 1.08em;
+  width: 1em;
   height: 1em;
-  fill: initial;
+  fill: #52AC62;
 }
 
 .icon-check {
@@ -908,6 +908,12 @@ a {
   width: 0.94em;
   height: 1em;
   fill: #706F6F;
+}
+
+.icon-sale {
+  width: 1em;
+  height: 1em;
+  fill: #D24A43;
 }
 
 .icon-sales-quote {
@@ -1596,6 +1602,18 @@ input::-ms-clear {
 
 .field__icon .icon-additional-line {
   color: #EC0606;
+}
+
+.field__discount {
+  position: absolute;
+  left: -34px;
+  bottom: 14px;
+}
+
+.field__discount .icon {
+  color: #fff;
+  fill: #ec4a41;
+  font-size: 22px;
 }
 
 .steps {
@@ -2396,8 +2414,6 @@ input::-ms-clear {
   left: 10px;
   margin-top: -0.5em;
   fill: #22B745;
-  stroke: #1a8c35;
-  stroke-width: 10px;
   font-size: 32px;
 }
 
