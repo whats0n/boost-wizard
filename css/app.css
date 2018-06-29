@@ -2426,7 +2426,7 @@ input::-ms-clear {
   top: 50%;
   left: 100%;
   right: auto;
-  width: auto;
+  width: 130px;
   -ms-transform: translate(10px, -50%);
   transform: translate(10px, -50%);
 }
