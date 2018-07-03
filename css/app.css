@@ -1529,6 +1529,13 @@ input::-ms-clear {
   padding-top: 30px;
 }
 
+.form__calendar {
+  position: absolute;
+  right: 10px;
+  bottom: 100%;
+  margin-bottom: -10px;
+}
+
 .field {
   position: relative;
   padding-left: 40px;
@@ -1608,6 +1615,26 @@ input::-ms-clear {
   color: #fff;
   fill: #ec4a41;
   font-size: 22px;
+}
+
+.calendar {
+  white-space: nowrap;
+}
+
+.calendar p, .calendar__input {
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+}
+
+.calendar__input {
+  width: 140px;
+}
+
+.calendar p {
+  padding-right: 10px;
+  font-size: 14px;
+  line-height: 40px;
 }
 
 .steps {
