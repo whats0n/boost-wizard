@@ -222,4 +222,18 @@ window.addEventListener('load', function() {
     });
   })();
   //END SELECT
+
+  //BEGIN TOGGLE
+  $('.js-toggle').each((i, container) => {
+    container = $(container);
+    const control = container.find('.js-toggle-control');
+    const section = container.find('.js-toggle-section');
+
+    control.on('click', e => {
+      e.preventDefault();
+      control.toggleClass('is-active');
+      section.toggle();
+    });
+  });
+  //END TOGGLE
 });
