@@ -86,9 +86,16 @@
 		transition: color 0.25s
 		&:active
 			color: $blueActive
+		&.is-active
+			.modal-content__active
+				display: inline
+			.modal-content__default
+				display: none
 	&__details
 		display: none
 		margin-top: 20px
+	&__active
+		display: none
 
 .modal-item
 	position: relative

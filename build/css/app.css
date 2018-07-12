@@ -2233,9 +2233,21 @@ input::-ms-clear {
   color: #2183bf;
 }
 
+.modal-content__toggle.is-active .modal-content__active {
+  display: inline;
+}
+
+.modal-content__toggle.is-active .modal-content__default {
+  display: none;
+}
+
 .modal-content__details {
   display: none;
   margin-top: 20px;
+}
+
+.modal-content__active {
+  display: none;
 }
 
 .modal-item {
