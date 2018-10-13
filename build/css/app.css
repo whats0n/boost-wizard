@@ -832,6 +832,12 @@ a {
   fill: #38AA35;
 }
 
+.icon-checkbox {
+  width: 1em;
+  height: 1em;
+  fill: initial;
+}
+
 .icon-close {
   width: 1em;
   height: 1em;
@@ -1247,6 +1253,70 @@ input::-ms-clear {
   line-height: 1.2;
 }
 
+.checkbox {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 30px;
+  min-height: 30px;
+  font-size: 0;
+  line-height: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox:active .checkbox__icon,
+.checkbox:active input:checked + .checkbox__icon {
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.checkbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox input:checked + .checkbox__icon {
+  border: none;
+  background: #ff6431;
+  box-shadow: none;
+}
+
+.checkbox input:checked + .checkbox__icon svg {
+  fill: #fff;
+}
+
+.checkbox__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  color: #eee;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px #eee;
+  line-height: 30px;
+  text-align: center;
+  transition: background .05s ease,box-shadow .05s ease,color .05s ease;
+}
+
+.checkbox__icon svg {
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  fill: currentColor;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .select2-container--default .select2-selection--multiple,
 .select2-container--default .select2-selection--single {
   border-color: #eee;
@@ -1589,6 +1659,10 @@ input::-ms-clear {
   clear: both;
 }
 
+.field__row.field__row_check .field__col {
+  width: calc(50% - 45px);
+}
+
 .field__row_top .field__col {
   vertical-align: top;
 }
@@ -1598,6 +1672,14 @@ input::-ms-clear {
   vertical-align: middle;
   padding: 0 10px;
   width: 50%;
+}
+
+.field__checkbox {
+  padding: 0 10px;
+  width: 90px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .field__icon {

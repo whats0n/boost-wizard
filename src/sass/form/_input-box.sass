@@ -24,7 +24,7 @@
 		&:active
 			color: $darkGray
 			background: none
-		.icon 
+		.icon
 			position: absolute
 			top: 50%
 			left: 50%
@@ -46,3 +46,50 @@
 		color: lighten($darkGray, 50%)
 		font-size: 14px
 		line-height: 1.2
+
+.checkbox
+	position: relative
+	display: inline-block
+	vertical-align: top
+	min-width: 30px
+	min-height: 30px
+	font-size: 0
+	line-height: 30px
+	cursor: pointer
+	+nosel
+	&:active .checkbox__icon,
+	&:active input:checked+.checkbox__icon
+		box-shadow: inset 2px 2px 4px rgba(0,0,0,.3)
+	input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		cursor: pointer
+		&:checked+.checkbox__icon
+			border: none
+			background: #ff6431
+			box-shadow: none
+			svg
+				fill: $white
+	&__icon
+		position: absolute
+		top: 0
+		left: 0
+		padding: 0
+		border-radius: 5px
+		width: 100%
+		height: 100%
+		color: #eee
+		background: #fff
+		box-shadow: inset 0 0 0 1px #eee
+		line-height: 30px
+		text-align: center
+		transition: background .05s ease,box-shadow .05s ease,color .05s ease
+		svg
+			font-size: 16px
+			position: absolute
+			top: 50%
+			left: 50%
+			fill: currentColor
+			transform: translate(-50%, -50%)

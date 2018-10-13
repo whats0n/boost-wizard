@@ -20,23 +20,32 @@
 		margin: 0 -10px
 		font-size: 0
 		+clr 
+		&.field__row_check
+			.field__col
+				width: calc(50% - 45px)
 		&_top
 			.field__col
 				vertical-align: top
-	&__col 
+	&__col
 		display: inline-block
 		vertical-align: middle
 		padding: 0 10px
 		width: 50%
+	&__checkbox
+		padding: 0 10px
+		width: 90px
+		display: inline-block
+		vertical-align: middle
+		text-align: center
 	&__icon
 		position: absolute
 		top: 15px
 		left: 0
 		font-size: 0
-		img 
+		img
 			height: 1em
 			font-size: 30px
-		.icon 
+		.icon
 			fill: #706F6F
 			font-size: 30px
 		.icon-primary-line
@@ -47,7 +56,7 @@
 		position: absolute
 		left: -34px
 		bottom: 14px
-		.icon 
+		.icon
 			color: $white
 			fill: $red
 			font-size: 22px
