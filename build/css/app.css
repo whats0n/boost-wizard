@@ -1234,6 +1234,9 @@ input::-ms-clear {
   top: 100%;
   left: 0;
   right: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .input-box__message {
@@ -1403,6 +1406,15 @@ input::-ms-clear {
   font-size: 14px;
 }
 
+.form__text_sm {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.form__text_sm .icon {
+  top: 3px;
+}
+
 .form__field {
   max-width: 460px;
   margin: 0 auto;
@@ -1416,6 +1428,10 @@ input::-ms-clear {
 
 .form__field:not(:last-child) {
   padding-bottom: 30px;
+}
+
+.form__field_simple:not(:last-child) {
+  padding-bottom: 10px;
 }
 
 .form__field_line {
@@ -1573,6 +1589,10 @@ input::-ms-clear {
   clear: both;
 }
 
+.field__row_top .field__col {
+  vertical-align: top;
+}
+
 .field__col {
   display: inline-block;
   vertical-align: middle;
@@ -1615,6 +1635,11 @@ input::-ms-clear {
   color: #fff;
   fill: #ec4a41;
   font-size: 22px;
+}
+
+.field__text {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .calendar {
@@ -1838,6 +1863,10 @@ input::-ms-clear {
 
 .box_with-promo .box__inner {
   max-height: calc(100vh - 410px);
+}
+
+.box_simple .box__inner {
+  padding: 20px 0;
 }
 
 .box__heading {

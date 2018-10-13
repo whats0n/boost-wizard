@@ -46,12 +46,20 @@
 			top: 12px
 			left: 0
 			font-size: 14px
+		&_sm 
+			font-size: 14px
+			line-height: 20px
+			.icon 
+				top: 3px
 	&__field
 		max-width: 460px
 		margin: 0 auto
 		+clr
 		&:not(:last-child)
 			padding-bottom: 30px
+		&_simple
+			&:not(:last-child)
+				padding-bottom: 10px
 		&_line
 			margin: 0 -5px
 			font-size: 0
