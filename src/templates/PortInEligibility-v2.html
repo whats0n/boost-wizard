@@ -9,7 +9,6 @@ customSteps: [
 	{ title: 'Download to POS' }
 ]
 activeStep: 3
-boxClassList: 'box_simple'
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -23,7 +22,6 @@ boxClassList: 'box_simple'
 						<div class="field">
 							<div class="field__row field__row_top">
 								<div class="field__col">
-									<label class="form__label">Mobile Number:</label>
 									{{form.inputBox.call({
 										placeholder: 'Input Mobile Number',
 										classList: 'is-error',
@@ -32,7 +30,6 @@ boxClassList: 'box_simple'
 								</div>
 								{% if loop.index < 3 %}
 									<div class="field__col">
-										<label class="form__label">Result:</label>
 										{% if loop.index === 1 %}
 											<div class="form__text form__text_sm field__text color-green">{{mixins.icon('check')}} Mobile Number is eligible for Port Credit Promotional Pricing</div>
 										{% endif %}
