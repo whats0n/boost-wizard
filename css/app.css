@@ -1501,7 +1501,7 @@ input::-ms-clear {
 }
 
 .form__field_simple:not(:last-child) {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .form__field_line {
