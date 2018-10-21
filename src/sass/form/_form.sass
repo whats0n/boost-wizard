@@ -5,6 +5,8 @@
 	color: $text
 	&_md
 		max-width: 800px
+	&_wide
+		max-width: none
 	&_type
 		&[data-type-buttons="1"]
 			max-width: 660px
@@ -45,12 +47,20 @@
 			position: absolute
 			top: 12px
 			left: 0
+			fill: currentColor
 			font-size: 14px
+		.icon-alert,
+		.icon-information
+			top: 10px
+			font-size: 16px
 		&_sm 
 			font-size: 14px
 			line-height: 20px
 			.icon 
 				top: 3px
+			.icon-alert,
+			.icon-information
+				top: 2px
 	&__field
 		max-width: 460px
 		margin: 0 auto

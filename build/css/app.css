@@ -796,6 +796,12 @@ a {
   fill: #706F6F;
 }
 
+.icon-alert {
+  width: 1em;
+  height: 1em;
+  fill: initial;
+}
+
 .icon-boost-portal {
   width: 1.52em;
   height: 1em;
@@ -881,6 +887,12 @@ a {
 }
 
 .icon-info {
+  width: 1em;
+  height: 1em;
+  fill: initial;
+}
+
+.icon-information {
   width: 1em;
   height: 1em;
   fill: initial;
@@ -1412,6 +1424,10 @@ input::-ms-clear {
   max-width: 800px;
 }
 
+.form_wide {
+  max-width: none;
+}
+
 .form_type[data-type-buttons="1"] {
   max-width: 660px;
 }
@@ -1473,7 +1489,14 @@ input::-ms-clear {
   position: absolute;
   top: 12px;
   left: 0;
+  fill: currentColor;
   font-size: 14px;
+}
+
+.form__text .icon-alert,
+.form__text .icon-information {
+  top: 10px;
+  font-size: 16px;
 }
 
 .form__text_sm {
@@ -1483,6 +1506,11 @@ input::-ms-clear {
 
 .form__text_sm .icon {
   top: 3px;
+}
+
+.form__text_sm .icon-alert,
+.form__text_sm .icon-information {
+  top: 2px;
 }
 
 .form__field {
@@ -1676,6 +1704,14 @@ input::-ms-clear {
   vertical-align: middle;
   padding: 0 10px;
   width: 50%;
+}
+
+.field__col_control {
+  width: 30%;
+}
+
+.field__col_message {
+  width: 70%;
 }
 
 .field__checkbox {

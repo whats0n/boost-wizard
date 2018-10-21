@@ -14,27 +14,34 @@ activeStep: 3
 
 {% block content %}
 	
-	<div class="form form_md">
+	<div class="form form_wide">
 		<form action="/">
 			{% for item in range(0,5) %}
 				<div class="form__field form__field_wide form__field_simple">
 					<div class="fields">
 						<div class="field">
 							<div class="field__row field__row_top">
-								<div class="field__col">
+								<div class="field__col field__col_control">
 									{{form.inputBox.call({
 										placeholder: 'Input Mobile Number',
-										classList: 'is-error',
-										inputClassList: 'simple-input_sm'
+										classList: 'is-error'
 									})}}
 								</div>
-								{% if loop.index < 3 %}
-									<div class="field__col">
+								{% if loop.index < 5 %}
+									<div class="field__col field__col_message">
 										{% if loop.index === 1 %}
 											<div class="form__text form__text_sm field__text color-green">{{mixins.icon('check')}} Mobile Number is eligible for Port Credit Promotional Pricing</div>
 										{% endif %}
 										{% if loop.index === 2 %}
 											<div class="form__text form__text_sm field__text color-red">{{mixins.icon('error')}} Mobile Number is not eligible for Port Credit Promotional Pricing</div>
+										{% endif %}
+										{% if loop.index === 3 %}
+											<div class="form__text form__text_sm field__text color-red">{{mixins.icon('error')}}Mobile Number is not eligible for Port Credit Promotional Pricing</div>
+											<div class="form__text form__text_sm field__text color-red">{{mixins.icon('alert')}}The PTN is already active</div>
+										{% endif %}
+										{% if loop.index === 4 %}
+											<div class="form__text form__text_sm field__text color-red">{{mixins.icon('error')}} Mobile Number is not eligible for Port Credit Promotional Pricing</div>
+											<div class="form__text form__text_sm field__text color-red">{{mixins.icon('information')}}If you choose to proceed promotions are not going to be available for current customer</div>
 										{% endif %}
 									</div>
 								{% endif %}
