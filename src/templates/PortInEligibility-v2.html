@@ -37,11 +37,27 @@ activeStep: 3
 										{% endif %}
 										{% if loop.index === 3 %}
 											<div class="form__text form__text_sm field__text color-red">{{mixins.icon('error')}}Mobile Number is not eligible for Port Credit Promotional Pricing</div>
-											<div class="form__text form__text_sm field__text color-red">{{mixins.icon('alert')}}The PTN is already active</div>
+											<div class="form__text form__text_sm field__text color-red">
+												<div class="form__icon">
+													{{mixins.icon('alert', 'tooltip-control')}}
+													<div class="tooltip tooltip_top form__tooltip">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+													</div>
+												</div>
+												The PTN is already active
+											</div>
 										{% endif %}
 										{% if loop.index === 4 %}
 											<div class="form__text form__text_sm field__text color-red">{{mixins.icon('error')}} Mobile Number is not eligible for Port Credit Promotional Pricing</div>
-											<div class="form__text form__text_sm field__text color-red">{{mixins.icon('information')}}If you choose to proceed promotions are not going to be available for current customer</div>
+											<div class="form__text form__text_sm field__text color-red">
+												<div class="form__icon">
+													{{mixins.icon('information', 'tooltip-control')}}
+													<div class="tooltip tooltip_top form__tooltip">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+													</div>
+												</div>
+												If you choose to proceed promotions are not going to be available for current customer
+											</div>
 										{% endif %}
 									</div>
 								{% endif %}
