@@ -23,3 +23,6 @@ PageList:
 - file: modals.html
 - file: loader.html
 - file: ApplyPromotionDescription.html
+- file: error-400.html
+- file: error-401.html
+- file: error-500.html
