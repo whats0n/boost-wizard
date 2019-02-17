@@ -2778,6 +2778,30 @@ input::-ms-clear {
   }
 }
 
+.header {
+  padding: 15px;
+  background: #2e2e2e;
+  font-size: 0;
+  text-align: center;
+}
+
+.header__logo {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.header__logo-img {
+  height: 30px;
+}
+
+.error-text {
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 18px;
+  text-align: center;
+}
+
 @media (prefers-reduced-motion: reduce) {
 
   * {
